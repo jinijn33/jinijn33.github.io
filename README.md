@@ -1,6 +1,6 @@
 # jinijn33.github.io
 
-[**homework2-1 - 임시**](https://github.com/jinijn33/jinijn33.github.io/blob/main/homework%202-1.html)
+[**homework2-1 - 임시**](https://jinijn33.github.io/homework%202-1.html)
 -
 [**homework2-2 - 임시**](https://jinijn33.github.io/homework%202-1.html)
 -

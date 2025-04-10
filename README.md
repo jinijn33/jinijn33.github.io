@@ -12,6 +12,8 @@
 
 [**homework3-1 image**](https://jinijn33.github.io/homework3-1.png)
 
+[**homework3-2 image**](https://jinijn33.github.io/homework3-2.png)
+
 [**calender example image**](https://jinijn33.github.io/calender_test.png)
 
 저는 20221279 최민석 입니다.

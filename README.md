@@ -16,7 +16,7 @@
 
 [**homework3-3 image**](https://jinijn33.github.io/homework3-3.png)
 
-[**homework3-3 image**](https://jinijn33.github.io/homework3-4.png)
+[**homework3-4 image**](https://jinijn33.github.io/homework3-4.png)
 
 [**calender example image - homework 3-5**](https://jinijn33.github.io/calender_test.png)
 

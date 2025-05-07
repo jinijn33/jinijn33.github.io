@@ -5,7 +5,7 @@ $_GET['order'] = isset($order) ? $_GET['order'] : null;
 <html>
 <head>
     <meta charset="utf-8">
-    <title>classscore</title>
+    <title>homework 4</title>
     <style>
         .input-wrap {
             width: 960px;
@@ -14,11 +14,14 @@ $_GET['order'] = isset($order) ? $_GET['order'] : null;
         h1 { text-align: center; }
         th, td { text-align: center; }
         table {
-            border: 1px solid #000;
+            border: 1px solid black;
             margin: 0 auto;
+            border-collapse: collapse;
+            width: 80%;
         }
         td, th {
-            border: 1px solid #ccc;
+            border: 1px solid black;
+            padding: 5px;
         }
         a { text-decoration: none; }
     </style>
@@ -41,35 +44,83 @@ $_GET['order'] = isset($order) ? $_GET['order'] : null;
                         <td>1
                         <td>입장권
                         <td>7,000
-                        <td>" "
+                        <td><p>
+                            <select name="select">
+                            <option value="Option 1" selected>1</option>
+                            <option value="Option 2">2</option>
+                            <option value="Option 3">3</option>
+                            </select>
+                            </p>
                         <td>10,000
-                        <td>" "
+                        <td><p>
+                            <select name="select">
+                            <option value="Option 1" selected>1</option>
+                            <option value="Option 2">2</option>
+                            <option value="Option 3">3</option>
+                            </select>
+                            </p>
                         <td>입장
                     </tr>
                     <tr>
                         <td>2
                         <td>BIG3
                         <td>12,000
-                        <td>" "
+                        <td><p>
+                            <select name="select">
+                            <option value="Option 1" selected>1</option>
+                            <option value="Option 2">2</option>
+                            <option value="Option 3">3</option>
+                            </select>
+                            </p>
                         <td>16,000
-                        <td>" "
+                        <td><p>
+                            <select name="select">
+                            <option value="Option 1" selected>1</option>
+                            <option value="Option 2">2</option>
+                            <option value="Option 3">3</option>
+                            </select>
+                            </p>
                         <td>입장+놀이3종
                     </tr>
                     <tr>
                     <td>2
                         <td>자유이용권
                         <td>21,000
-                        <td>" "
+                        <td><p>
+                            <select name="select">
+                            <option value="Option 1" selected>1</option>
+                            <option value="Option 2">2</option>
+                            <option value="Option 3">3</option>
+                            </select>
+                            </p>
                         <td>26,000
-                        <td>" "
+                        <td><p>
+                            <select name="select">
+                            <option value="Option 1" selected>1</option>
+                            <option value="Option 2">2</option>
+                            <option value="Option 3">3</option>
+                            </select>
+                            </p>
                         <td>입장+놀이자유
                     </tr>
                     <td>3
                         <td>연간이용권
                         <td>70,000
-                        <td>" "
+                        <td><p>
+                            <select name="select">
+                            <option value="Option 1" selected>1</option>
+                            <option value="Option 2">2</option>
+                            <option value="Option 3">3</option>
+                            </select>
+                            </p>
                         <td>90,000
-                        <td>" "
+                        <td><p>
+                            <select name="select">
+                            <option value="Option 1" selected>1</option>
+                            <option value="Option 2">2</option>
+                            <option value="Option 3">3</option>
+                            </select>
+                            </p>
                         <td>입장+놀이자유
                     </tr>
                 </tbody>

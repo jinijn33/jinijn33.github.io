@@ -1,0 +1,134 @@
+<?php
+$prices = [
+    ['name' => '입장권',     'child' => 7000,  'adult' => 10000, 'note' => '입장'],
+    ['name' => 'BIG3',       'child' => 12000, 'adult' => 16000, 'note' => '입장+놀이3종'],
+    ['name' => '자유이용권', 'child' => 21000, 'adult' => 26000, 'note' => '입장+놀이자유'],
+    ['name' => '연간이용권', 'child' => 70000, 'adult' => 90000, 'note' => '입장+놀이자유'],
+];
+
+$total = 0;
+$summary = "";
+$submitted = false;
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $submitted = true;
+    $customer = htmlspecialchars($_POST['customer']);
+    $childCounts = $_POST['child'];
+    $adultCounts = $_POST['adult'];
+
+    $summary .= date("Y년 m월 d일 A h:i") . "<br>";
+    $summary .= "{$customer} 고객님 감사합니다.<br>";
+
+    for ($i = 0; $i < count($prices); $i++) {
+        $childQty = intval($childCounts[$i]);
+        $adultQty = intval($adultCounts[$i]);
+        $childTotal = $childQty * $prices[$i]['child'];
+        $adultTotal = $adultQty * $prices[$i]['adult'];
+        $itemTotal = $childTotal + $adultTotal;
+
+        if ($childQty > 0) $summary .= "어린이 {$prices[$i]['name']} {$childQty}매<br>";
+        if ($adultQty > 0) $summary .= "어른 {$prices[$i]['name']} {$adultQty}매<br>";
+
+        $total += $itemTotal;
+    }
+
+    $summary .= "합계 <strong>" . number_format($total) . "원</strong>입니다.";
+}
+?>
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>요금 계산기</title>
+    <style>
+        body {
+            font-family: "돋움", Dotum, sans-serif;
+            font-size: 12px;
+            padding: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 600px;
+            font-size: 12px;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 3px 6px;
+            text-align: center;
+        }
+        th {
+            background-color: #f9f9f9;
+        }
+        input[type="text"] {
+            width: 150px;
+            height: 20px;
+            font-size: 12px;
+        }
+        select {
+            font-size: 12px;
+            width: 45px;
+            height: 20px;
+        }
+        button {
+            font-size: 12px;
+            height: 24px;
+            padding: 0 8px;
+            vertical-align: middle;
+        }
+        .summary {
+            margin-top: 20px;
+            width: 600px;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+<form method="post">
+    고객성명 <input type="text" name="customer" required>
+    <button type="submit">합계</button>
+
+    <table>
+        <tr>
+            <th>No</th>
+            <th>구분</th>
+            <th colspan="2">어린이</th>
+            <th colspan="2">어른</th>
+            <th>비고</th>
+        </tr>
+        <?php foreach ($prices as $i => $row): ?>
+        <tr>
+            <td><?= $i + 1 ?></td>
+            <td><?= $row['name'] ?></td>
+            <td><?= number_format($row['child']) ?></td>
+            <td>
+                <select name="child[]">
+                    <?php for ($j = 0; $j <= 5; $j++): ?>
+                        <option value="<?= $j ?>"><?= $j ?></option>
+                    <?php endfor; ?>
+                </select>
+            </td>
+            <td><?= number_format($row['adult']) ?></td>
+            <td>
+                <select name="adult[]">
+                    <?php for ($j = 0; $j <= 5; $j++): ?>
+                        <option value="<?= $j ?>"><?= $j ?></option>
+                    <?php endfor; ?>
+                </select>
+            </td>
+            <td><?= $row['note'] ?></td>
+        </tr>
+        <?php endforeach; ?>
+    </table>
+</form>
+
+<?php if ($submitted): ?>
+    <div class="summary">
+        <?= $summary ?>
+    </div>
+<?php endif; ?>
+
+</body>
+</html>

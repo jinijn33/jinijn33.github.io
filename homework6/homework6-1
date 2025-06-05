@@ -1,66 +1,74 @@
 <html>
 <head>
-    <title>Tracking Mouse and Touch Events on Canvas</title>
+    <title>Mouse Event Tracking</title>
     <script type="text/javascript">
-        var canvas, context, canX, canY, startx, starty, mouseIsDown = 0;
- 
+        var canvas, context, canX, canY, mouseIsDown = 0;
+        var startX = null, startY = null;
+
         function init() {
             canvas = document.getElementById("myCanvas");
-            context = canvas.getContext("2d"); 
+            context = canvas.getContext("2d");
             canvas.addEventListener("mousedown", mouseDown, false);
             canvas.addEventListener("mousemove", mouseXY, false);
             canvas.addEventListener("mouseup", mouseUp, false);
-            startx = starty = -1;
         }
- 
+
         function mouseUp() {
             mouseIsDown = 0;
-            startx = starty = -1;
             mouseXY();
         }
- 
-        function mouseDown() {
-            mouseXY();
-            if(mouseisDown == 0){
-                startx = canX;
-                starty = canY;
-            }
+
+        function mouseDown(e) {
             mouseIsDown = 1;
+            mouseXY(e);
+            startX = canX;
+            startY = canY;
         }
- 
+
         function mouseXY(e) {
-            if (!e) var e = event;
-            canX = e.pageX - canvas.offsetLeft;
-            canY = e.pageY - canvas.offsetTop;
+            if (!e) e = event;
+            var rect = canvas.getBoundingClientRect();
+            canX = e.clientX - rect.left;
+            canY = e.clientY - rect.top;
             showPos();
         }
- 
+
         function showPos() {
-            // large, centered, bright green text
-            context.font = "24pt Helvetica";
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            // 출력 문자열 구성
+            var str = "";
+            if (startX !== null && startY !== null) {
+                str = "(" + startX + "," + startY + ") - (" + canX + "," + canY + ")";
+                str += mouseIsDown ? " down" : " up";
+            }
+
+            // 중앙에 문자열 출력
+            context.font = "20pt Helvetica";
             context.textAlign = "center";
             context.textBaseline = "middle";
             context.fillStyle = "black";
-            var str = "(" + startx + ", " + starty + ")" + "(" + canX + ", " + canY + ")";
-            if (mouseIsDown) str += " down";
-            else str += " up";
-            context.clearRect(0, 0, canvas.width, canvas.height);
-            context.fillText(str, canvas.width / 2, canvas.height / 2, canvas.width - 10);
-            str = ", " + startx + ", " + starty;
-            context.fillText(str, canvas.width / 2, canvas.height / 2, canvas.width - 10);
-            if (mouseIsDown) context.fillStyle = "red";
-            else context.fillStyle = "green";
-            context.fillRect(canX -5, canY -5, 10, 10);
-            ctx.strokeStyle = "red";
-            if(startx!=-1 && starty != -1){
-                context.storkeRect(startx, starty, canX - startx, canY - starty);
+            context.fillText(str, canvas.width / 2, canvas.height / 2);
+
+            // 현재 마우스 위치에 사각형
+            context.fillStyle = mouseIsDown ? "red" : "green";
+            context.fillRect(canX - 3, canY - 3, 6, 6);
+
+            // 시작 지점부터 현재 지점까지 사각형 테두리 (선택사항)
+            if (startX !== null && startY !== null && mouseIsDown) {
+                context.strokeStyle = "blue";
+                context.lineWidth = 2;
+                context.strokeRect(
+                    Math.min(startX, canX),
+                    Math.min(startY, canY),
+                    Math.abs(canX - startX),
+                    Math.abs(canY - startY)
+                );
             }
         }
     </script>
- 
 </head>
 <body onload="init()">
-    <canvas id="myCanvas" height="500" width="500" style="border:1px solid #000000;">
-    </canvas>
+    <canvas id="myCanvas" width="500" height="500" style="border:1px solid black;"></canvas>
 </body>
 </html>

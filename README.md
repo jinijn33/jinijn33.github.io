@@ -1,4 +1,4 @@
-### jinijn33.github.io
+## jinijn33.github.io
 
 [**Tutorial1**](https://github.com/jinijn33/jinijn33.github.io/blob/main/26-1/Tutorial/tutorial1.ipynb)
 

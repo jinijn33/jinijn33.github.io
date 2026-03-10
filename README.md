@@ -4,6 +4,6 @@
 
 [**26-1 영상처리**](https://github.com/jinijn33/jinijn33.github.io/tree/main/26-1)
 
-[**Tutorial1**](https://github.com/jinijn33/jinijn33.github.io/blob/main/26-1/Tutorial/tutorial1.ipynb)
+[**Tutorial**](https://github.com/jinijn33/jinijn33.github.io/tree/main/26-1/Tutorial)
 
 [**chap1**](https://github.com/jinijn33/jinijn33.github.io/tree/main/26-1/chap1)

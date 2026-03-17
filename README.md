@@ -4,6 +4,6 @@
 
 [**26-1 영상처리**](https://github.com/jinijn33/jinijn33.github.io/tree/main/26-1)
 
-[**Tutorial**](https://github.com/jinijn33/jinijn33.github.io/tree/main/26-1/Tutorial)
+[**Tutorial Collection**](https://github.com/jinijn33/jinijn33.github.io/tree/main/26-1/Tutorial)
 
-[**chap1**](https://github.com/jinijn33/jinijn33.github.io/tree/main/26-1/chap1)
+[**Homework1**](https://youtu.be/vQFHD650KZ8?si=meY4e1J-FDC6tP33)

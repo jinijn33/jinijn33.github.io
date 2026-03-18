@@ -9,3 +9,5 @@
 [**Tutorial Collection**](https://github.com/jinijn33/jinijn33.github.io/tree/main/26-1/Tutorial)
 
 [**Homework Collection**](https://github.com/jinijn33/jinijn33.github.io/tree/main/26-1/homework)
+
+[**Video test**](https://www.youtube.com/watch?v=w9fE0nY-AwU&pp=ugUEEgJrbw%3D%3D)

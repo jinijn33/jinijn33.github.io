@@ -12,4 +12,4 @@
 
 [**Video test**](https://github.com/jinijn33/jinijn33.github.io/blob/main/26-1/tracking_gif_test.gif)
 
-[**gif test**]<img src="https://github.com/jinijn33/jinijn33.github.io/issues/1">
+[**gif test**]<img src="https://github.com/jinijn33/jinijn33.github.io/issues/1#issue-4093349899">

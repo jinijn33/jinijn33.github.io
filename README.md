@@ -11,5 +11,4 @@
 [**Homework Collection**](https://github.com/jinijn33/jinijn33.github.io/tree/main/26-1/homework)
 
 ## Homework1
----
 <img src="https://github.com/jinijn33/jinijn33.github.io/blob/main/26-1/homework/homework1.gif">

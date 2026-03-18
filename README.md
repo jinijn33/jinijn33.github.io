@@ -12,4 +12,4 @@
 
 ## Homework1
 ---
-(https://github.com/jinijn33/jinijn33.github.io/blob/main/26-1/homework/homework1.gif)
+https://github.com/jinijn33/jinijn33.github.io/blob/main/26-1/homework/homework1.gif

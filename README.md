@@ -7,5 +7,8 @@
 ## Homework1
 <img src="https://github.com/jinijn33/jinijn33.github.io/blob/main/26-1/homework/homework1.gif">
 
+## Homework2
+<img src="https://github.com/jinijn33/jinijn33.github.io/blob/main/26-1/homework/homework2.gif">
+
 ## Homework3
 <img src="https://github.com/jinijn33/jinijn33.github.io/blob/main/26-1/homework/Homework3_Outputs.png">

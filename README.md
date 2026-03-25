@@ -4,6 +4,8 @@
 
 [**26-1 영상처리**](https://github.com/jinijn33/jinijn33.github.io/tree/main/26-1)
 
+[**Chapter**](https://github.com/jinijn33/jinijn33.github.io/tree/main/26-1/chap1)
+
 ## Homework1
 <img src="https://github.com/jinijn33/jinijn33.github.io/blob/main/26-1/homework/homework1.gif">
 

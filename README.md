@@ -4,19 +4,6 @@
 
 [**26-1 영상처리**](https://github.com/jinijn33/jinijn33.github.io/tree/main/26-1)
 
-[**Chapter 14-**](https://github.com/jinijn33/jinijn33.github.io/tree/main/26-1/chap1/chap14-)
+[**26-2 컴퓨터비전**]()
 
-## Homework1
-<img src="https://github.com/jinijn33/jinijn33.github.io/blob/main/26-1/homework/homework1.gif">
 
-## Homework2
-<img src="https://github.com/jinijn33/jinijn33.github.io/blob/main/26-1/homework/homework2.gif">
-
-## Homework3
-<img src="https://github.com/jinijn33/jinijn33.github.io/blob/main/26-1/homework/Homework3_Outputs.png">
-
-## Homework4
-<img src="https://github.com/jinijn33/jinijn33.github.io/blob/main/26-1/homework/homework4_output.png">
-
-## Homework5
-<img src="https://github.com/jinijn33/jinijn33.github.io/blob/main/26-1/homework/homework5.gif">

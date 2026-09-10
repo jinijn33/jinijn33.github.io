@@ -4,6 +4,6 @@
 
 [**26-1 영상처리**](https://github.com/jinijn33/jinijn33.github.io/tree/main/26-1)
 
-[**26-2 컴퓨터비전**]()
+[**26-2 컴퓨터비전**](https://github.com/jinijn33/jinijn33.github.io/tree/main/26-2)
 
 
